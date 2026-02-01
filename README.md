@@ -11,8 +11,44 @@ The project focuses on initializing ESLint, customizing linting rules, and runni
 
 ### 1. Initialize Node.js Project
 A new Node.js project was created using:
-```bash
-npm init
-<img width="600" height="190" alt="Screenshot 2026-02-01 at 2 50 37 PM" src="https://github.com/user-attachments/assets/3a52ea27-9352-4f42-ade9-23162cee0dcf" />
+bash 
+npm.init
+
+2. Install and Configure ESLint
+ESLint was installed and configured using:
+npx eslint --init
+
+During the setup process, the following options were selected:
+JavaScript files
+CommonJS modules
+No framework
+No TypeScript
+Node.js environment
+npm as the package manager
+
+This created the ESLint configuration file:
+eslint.config.mjs
+
+The ESLint configuration was reviewed and customized to enforce consistent coding style. The following rules were added:
+Semicolons are required
+Single quotes are enforced for strings
+Example rule configuration:
+rules: {
+  semi: ["error", "always"],
+  quotes: ["error", "single"]
+}
+
+A JavaScript file (mikelint.js) was created with intentional style errors. ESLint was run using:
+npx eslint mikelint.js
+
+
+   
+
+
+
+
+
+
+
 
 
